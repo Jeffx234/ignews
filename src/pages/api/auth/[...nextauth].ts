@@ -45,6 +45,7 @@ export interface ISession {
 }
 
 export default NextAuth({
+  secret: process.env.NEXTAUTH_URL,
   providers: [
     Providers.GitHub({
       clientId: process.env.GITHUB_CLIENT_ID,
